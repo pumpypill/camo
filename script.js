@@ -16,10 +16,6 @@ class CamoCoinStealth {
     }
 
     setupEventListeners() {
-        // Night Vision Toggle
-        const nightVisionBtn = document.getElementById('night-vision-toggle');
-        nightVisionBtn.addEventListener('click', () => this.toggleNightVision());
-
         // Hidden Button Discovery
         document.querySelectorAll('.hidden-btn, .hidden-buy-btn, .hidden-social-btn').forEach(btn => {
             btn.addEventListener('mouseenter', this.onButtonHover);
@@ -80,19 +76,7 @@ class CamoCoinStealth {
         });
     }
 
-    toggleNightVision() {
-        this.nightVisionActive = !this.nightVisionActive;
-        document.body.classList.toggle('night-vision', this.nightVisionActive);
-        
-        const btn = document.getElementById('night-vision-toggle');
-        btn.textContent = this.nightVisionActive ? '🔍 DAY MODE' : '🔍 NIGHT VISION';
-        
-        // Add sound effect simulation
-        this.playSound('nightvision');
-        
-        // Brief screen flash effect
-        this.flashScreen();
-    }
+    // Night vision functionality removed
 
     onButtonHover(e) {
         e.target.style.opacity = '0.9';
@@ -526,7 +510,6 @@ class CamoCoinStealth {
         `;
         
         const soundTexts = {
-            nightvision: '🔊 NIGHT VISION ACTIVATED',
             collect: '🔊 CAMO COIN COLLECTED',
             disconnect: '🔊 CONNECTION LOST',
             sniper: '🔊 SNIPER ALERT',
@@ -607,7 +590,7 @@ function createFloatingParticles() {
             position: absolute;
             color: var(--camo-green-3);
             font-size: 12px;
-            opacity: 0.1;
+            opacity: 0.01;
             animation: floatParticle ${10 + Math.random() * 10}s linear infinite;
             animation-delay: ${Math.random() * 10}s;
         `;

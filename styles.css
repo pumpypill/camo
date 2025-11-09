@@ -35,16 +35,7 @@ body {
 
 
 
-/* Night Vision Mode */
-body.night-vision {
-    background: radial-gradient(circle, rgba(0,255,65,0.1) 0%, rgba(0,100,20,0.3) 100%);
-    filter: hue-rotate(90deg) contrast(1.5) brightness(0.8);
-}
-
-body.night-vision * {
-    color: var(--night-vision) !important;
-    text-shadow: 0 0 10px var(--night-vision);
-}
+/* Removed Night Vision Mode */
 
 /* Connection Lost Overlay */
 .connection-lost {
@@ -207,22 +198,7 @@ body.night-vision * {
     text-shadow: 0 0 10px var(--camo-tan);
 }
 
-.night-vision-btn {
-    background: var(--camo-brown-1);
-    border: 2px solid var(--camo-tan);
-    color: var(--camo-tan);
-    padding: 0.5rem 1rem;
-    font-family: inherit;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.night-vision-btn:hover {
-    background: var(--night-vision);
-    color: black;
-    box-shadow: 0 0 20px var(--night-vision);
-}
+/* Removed Night Vision Button Styles */
 
 /* Hero Section */
 .hero-section {
@@ -254,10 +230,10 @@ body.night-vision * {
 
 .subtitle {
     font-size: 1.8rem;
-    color: var(--camo-brown-3);
+    color: rgba(107, 78, 10, 0.3);
     margin-bottom: 2rem;
-    opacity: 0.8;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    opacity: 0.2;
+    text-shadow: none;
 }
 
 .hero-taglines {
@@ -266,7 +242,7 @@ body.night-vision * {
 
 .fade-text {
     font-size: 1.2rem;
-    color: var(--camo-tan);
+    color: rgba(74, 93, 35, 0.2);
     margin: 1rem 0;
     opacity: 0;
     animation: fadeInOut 6s ease-in-out infinite;
@@ -277,20 +253,20 @@ body.night-vision * {
 
 @keyframes fadeInOut {
     0%, 20%, 80%, 100% { opacity: 0; }
-    40%, 60% { opacity: 1; }
+    40%, 60% { opacity: 0.1; }
 }
 
 /* Hidden Buttons (The main gag) */
 .hidden-btn, .hidden-buy-btn, .hidden-social-btn, .pump-btn {
-    background: var(--camo-green-1);
-    border: 2px solid var(--camo-green-2);
-    color: var(--camo-green-3);
+    background: rgba(74, 93, 35, 0.02);
+    border: 2px solid rgba(92, 107, 42, 0.02);
+    color: rgba(61, 74, 28, 0.02);
     padding: 1rem 2rem;
     font-family: inherit;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
-    opacity: 0.1;
+    opacity: 0.02;
     position: relative;
     letter-spacing: 1px;
     text-decoration: none;
@@ -299,10 +275,10 @@ body.night-vision * {
 }
 
 .hidden-btn:hover, .hidden-buy-btn:hover, .hidden-social-btn:hover, .pump-btn:hover {
-    opacity: 0.9;
-    background: var(--camo-tan);
-    color: var(--stealth-gray);
-    box-shadow: 0 0 20px rgba(212, 184, 150, 0.5);
+    opacity: 0.1;
+    background: rgba(212, 184, 150, 0.05);
+    color: rgba(42, 42, 42, 0.1);
+    box-shadow: none;
 }
 
 /* Floating Tokens */
@@ -317,10 +293,10 @@ body.night-vision * {
 
 .token {
     position: absolute;
-    color: var(--camo-brown-1);
+    color: rgba(139, 105, 20, 0.05);
     font-weight: 700;
     font-size: 1.2rem;
-    opacity: 0.3;
+    opacity: 0.02;
     animation: float 8s ease-in-out infinite;
 }
 
@@ -348,11 +324,11 @@ body.night-vision * {
 .section-title {
     font-size: 2.5rem;
     text-align: center;
-    color: var(--camo-tan);
+    color: rgba(92, 107, 42, 0.15);
     margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-shadow: none;
 }
 
 /* About Section */
@@ -363,7 +339,7 @@ body.night-vision * {
 
 .adjusting-text {
     font-size: 1.2rem;
-    color: var(--camo-brown-3);
+    color: rgba(61, 74, 28, 0.15);
     margin: 1rem 0;
     opacity: 0;
     animation: binocularAdjust 4s ease-in-out infinite;
@@ -375,7 +351,7 @@ body.night-vision * {
 
 @keyframes binocularAdjust {
     0%, 70%, 100% { opacity: 0; transform: scale(0.8); }
-    35% { opacity: 1; transform: scale(1); }
+    35% { opacity: 0.05; transform: scale(1); }
 }
 
 /* Team Section */
@@ -431,22 +407,22 @@ body.night-vision * {
 .tokenomics-item {
     text-align: center;
     padding: 2rem;
-    background: rgba(139, 105, 20, 0.2);
+    background: rgba(139, 105, 20, 0.03);
     border-radius: 10px;
 }
 
 .tokenomics-item h3 {
-    color: var(--camo-tan);
+    color: rgba(92, 107, 42, 0.12);
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
 .classified-text {
     font-family: 'Courier Prime', monospace;
-    color: var(--danger-red);
+    color: rgba(74, 93, 35, 0.08);
     font-weight: 700;
     font-size: 1.2rem;
-    background: var(--stealth-gray);
+    background: rgba(42, 42, 42, 0.1);
     padding: 1rem;
     border-radius: 5px;
     letter-spacing: 2px;
@@ -469,11 +445,11 @@ body.night-vision * {
 }
 
 .chart-label {
-    color: var(--camo-tan);
+    color: rgba(61, 74, 28, 0.1);
     font-weight: 700;
     text-align: center;
     padding: 2rem;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.05);
     border-radius: 10px;
 }
 
@@ -490,15 +466,15 @@ body.night-vision * {
     align-items: center;
     gap: 1rem;
     padding: 2rem;
-    background: rgba(74, 93, 35, 0.2);
+    background: rgba(74, 93, 35, 0.03);
     border-radius: 10px;
 }
 
 .step-number {
     width: 50px;
     height: 50px;
-    background: var(--camo-brown-1);
-    color: var(--camo-tan);
+    background: rgba(139, 105, 20, 0.05);
+    color: rgba(212, 184, 150, 0.08);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -508,13 +484,13 @@ body.night-vision * {
 }
 
 .step-content h3 {
-    color: var(--camo-tan);
+    color: rgba(74, 93, 35, 0.08);
     margin-bottom: 0.5rem;
     text-transform: uppercase;
 }
 
 .step-content p {
-    color: var(--camo-brown-3);
+    color: rgba(61, 74, 28, 0.06);
     margin-bottom: 1rem;
 }
 
@@ -551,18 +527,18 @@ body.night-vision * {
 
 .hidden-token {
     position: absolute;
-    color: var(--camo-green-3);
+    color: rgba(61, 74, 28, 0.02);
     font-weight: 700;
     cursor: pointer;
-    opacity: 0.2;
+    opacity: 0.01;
     transition: all 0.3s ease;
     user-select: none;
 }
 
 .hidden-token:hover {
-    opacity: 0.8;
+    opacity: 0.05;
     transform: scale(1.2);
-    color: var(--night-vision);
+    color: rgba(74, 93, 35, 0.1);
 }
 
 .hidden-token:nth-child(1) { top: 20%; left: 15%; }
@@ -646,24 +622,24 @@ body.night-vision * {
 
 .social-item {
     padding: 2rem;
-    background: rgba(139, 105, 20, 0.2);
+    background: rgba(139, 105, 20, 0.02);
     border-radius: 10px;
 }
 
 .social-item h3 {
-    color: var(--camo-tan);
+    color: rgba(74, 93, 35, 0.1);
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
 .camo-background-small {
-    background: var(--camo-green-1);
-    color: var(--camo-green-3);
+    background: rgba(74, 93, 35, 0.2);
+    color: rgba(61, 74, 28, 0.05);
     padding: 1rem;
     border-radius: 5px;
     margin: 1rem 0;
     font-style: italic;
-    opacity: 0.8;
+    opacity: 0.1;
 }
 
 .discord-channels {
@@ -692,19 +668,19 @@ body.night-vision * {
 }
 
 .disclaimer .tiny-text {
-    color: var(--camo-green-3);
+    color: rgba(61, 74, 28, 0.02);
     font-size: 0.7rem;
-    opacity: 0.3;
+    opacity: 0.02;
     max-width: 800px;
     margin: 0 auto 2rem;
     line-height: 1.4;
 }
 
 .footer-taglines p {
-    color: var(--camo-brown-3);
+    color: rgba(61, 74, 28, 0.03);
     margin: 0.5rem 0;
     font-style: italic;
-    opacity: 0.8;
+    opacity: 0.05;
 }
 
 /* Modal */
@@ -831,13 +807,13 @@ body.night-vision * {
     
     /* Mobile touch improvements */
     .hidden-btn, .hidden-buy-btn, .hidden-social-btn {
-        opacity: 0.3;
+        opacity: 0.02;
         min-height: 44px;
         min-width: 120px;
     }
     
     .hidden-token {
-        opacity: 0.4;
+        opacity: 0.02;
         font-size: 1.1rem;
         min-width: 60px;
         min-height: 30px;
